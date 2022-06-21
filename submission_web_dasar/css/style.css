@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+input,
+textarea,
+button {
+  font-family: "Outfit", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  padding-top: 4rem;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}
+
+.header.shadow {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo img {
+  width: 2.5rem;
+}
+
+.nav-toggle {
+  cursor: pointer;
+}
+
+.nav-menu {
+  padding-top: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  padding: 0.5rem;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1c1917;
+}
+
+.nav-link:hover {
+  color: #60a5fa;
+}
+
+.btn {
+  background-color: #1c1917;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn:hover {
+  background-color: #60a5fa;
+  color: #fff;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#hero {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1c1917;
+}
+
+#interactive-text {
+  border-bottom: 2px solid #1c1917;
+  color: #facc15;
+}
+
+#colors {
+  display: flex;
+  gap: 1rem;
+}
+
+#colors div {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+}
+
+#colors div.active {
+  border: 2px solid #1c1917;
+}
+
+#yellow {
+  background-color: #facc15;
+}
+
+#red {
+  background-color: #f87171;
+}
+
+#green {
+  background-color: #4ade80;
+}
+
+#purple {
+  background-color: #a78bfa;
+}
+
+#hero p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+}
+
+#hero img {
+  margin-top: 1rem;
+  width: 100%;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+#company {
+  border-top: 1px solid #e2e8f0;
+  padding-bottom: 3rem;
+}
+
+.title {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.description {
+  padding: 1rem 0;
+  font-size: 1rem;
+}
+
+#company h1 {
+  text-align: center;
+  color: #94a3b8;
+  padding-top: 1rem;
+}
+
+.logos {
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logos img {
+  height: 2rem;
+}
+
+#service {
+  background-image: linear-gradient(60deg, #1e3a8a, #1c1917, #1e3a8a);
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+#service-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#service-title {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+#service-image {
+  display: none;
+}
+
+#service-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-item {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 1rem;
+}
+
+.service-item img {
+  width: 4rem;
+}
+
+.service-item h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.service-item p {
+  font-size: 0.9rem;
+}
+
+#testimonial {
+  padding: 3rem 0;
+}
+
+#testimonial-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#testimonial-title {
+  text-align: center;
+}
+
+#testimonial-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonial-item {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  flex: 1;
+}
+
+.testimonial-item img {
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.testimonial-item p {
+  padding: 1rem 0;
+  border-bottom: 2px solid #1c1917;
+}
+
+.testimonial-item h2 {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+#pricing {
+  background-color: #e2e8f0;
+  padding: 3rem 0;
+}
+
+#pricing-title {
+  text-align: center;
+}
+
+#pricing-choose {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+#pricing-choose a:hover {
+  background-color: #60a5fa;
+}
+
+#pricing-choose .active {
+  background-color: #3b82f6;
+}
+
+#pricing-items {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pricing-item {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  flex: 1;
+}
+
+.pricing-item:hover {
+  border-color: #60a5fa;
+}
+
+.pricing-item h2 {
+  text-align: center;
+}
+
+.pricing-item ul {
+  padding: 2rem 0;
+}
+
+.pricing-item li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.pricing-item .icon {
+  color: #059669;
+}
+
+.pricing-item a {
+  display: block;
+  padding: 0.7rem;
+}
+
+#contact {
+  padding: 4rem 0;
+  background-color: #cbd5e1;
+}
+
+#contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+#contact-title {
+  text-align: center;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  border: 0px;
+  font-size: 1rem;
+  resize: none;
+}
+
+#contact-form button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#profile-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#profile-image {
+  border-radius: 50%;
+  width: 5rem;
+  margin-bottom: 1rem;
+}
+
+#profile-role {
+  text-transform: uppercase;
+}
+
+#profile-name {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+#profile-bio,
+#profile-love {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+}
+
+.love-icon {
+  color: #ef4444;
+}
+
+#profile-email {
+  margin: 1rem 0;
+}
+
+#profile-social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+footer {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+#footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer-wrapper a {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+#footer-wrapper a:hover {
+  color: #60a5fa;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+  .navbar {
+    flex-direction: row;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    display: inline;
+  }
+
+  #hero {
+    padding: 4rem 0;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #hero p {
+    font-size: 1.3rem;
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  #hero img {
+    margin-top: 2rem;
+    width: 60%;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .logos img {
+    height: 2.5rem;
+  }
+
+  .description {
+    padding: 1.5rem 0;
+    font-size: 1.3rem;
+  }
+
+  #service-wrapper {
+    flex-direction: row;
+  }
+
+  #service-title {
+    text-align: left;
+    padding: 2rem;
+    flex: 1;
+  }
+
+  #service-image {
+    display: block;
+    width: 80%;
+    margin-top: 3rem;
+    border-radius: 1rem;
+  }
+
+  #service-items {
+    flex: 1;
+  }
+
+  .service-item {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .service-item h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .service-item p {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  #testimonial-items {
+    padding: 2rem 0;
+    flex-direction: row;
+  }
+
+  #pricing-items {
+    padding-top: 4rem;
+    flex-direction: row;
+  }
+
+  #contact-wrapper {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  #contact-form {
+    width: 50%;
+  }
+
+  #contact-title {
+    text-align: left;
+  }
+
+  #contact-form button {
+    width: 20%;
+  }
+
+  #profile-card {
+    width: 30%;
+  }
+}

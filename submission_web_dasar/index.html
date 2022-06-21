@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kreabook</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="nav-logo">
+          <img  src="./images/logo.png" alt="Kreabook Logo">
+          <div class="nav-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link" onclick="scrollToElement('service')">Layanan</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link" onclick="scrollToElement('pricing')">Harga</a>
+          </li>
+          <li class="nav-item">
+            <a href="#!" class="nav-link btn">Masuk</a>
+          </li>
+        </ul>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="container">
+      <h1>Kreatif Membuat Buku yang Menarik dan <span id="interactive-text">Interaktif</span>.</h1>
+      <p>Memberikan kemudahan dalam pembuatan buku dan menyediakan reader yang menarik untuk pembaca.</p>
+      <div id="colors">
+        <div id="yellow" class="active"></div>
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="purple"></div>
+      </div>
+      <img src="./images/editor.png" alt="Editor Image">
+    </section>
+
+    <section id="company" class="container">
+      <h1 class="title">Kerjasama</h1>
+      <div class="logos">
+        <img src="./images/google.png" alt="Google Logo">
+        <img src="./images/microsoft.png" alt="Microsoft Logo">
+        <img src="./images/adobe.png" alt="Adobe Logo">
+        <img src="./images/amazon.png" alt="Amazon Logo">
+      </div>
+    </section>
+
+    <section id="service">
+      <div id="service-wrapper" class="container">
+        <div id="service-title">
+          <h1 class="title">Layanan</h1>
+          <p class="description">Apa yang kami berikan?</p>
+          <img id="service-image" src="./images/service-image.png" alt="Service">
+        </div>
+        <div id="service-items">
+          <article class="service-item">
+            <img src="./images/writer.png" alt="Editor Line Icon">
+            <div>
+              <h2>Editor</h2>
+              <p>Memberikan kemudahan membuat buku interaktif</p>
+            </div>
+          </article>
+          <article class="service-item">
+            <img src="./images/web-design.png" alt="Templates Line Icon">
+            <div>
+              <h2>Templates</h2>
+              <p>Menyediakan beberapa template buku yang menarik</p>
+            </div>
+          </article>
+          <article class="service-item">
+            <img src="./images/online-shop.png" alt="Marketplace Line Icon">
+            <div>
+              <h2>Marketplace</h2>
+              <p>Mempublikasikan buku dengan gratis atau berbayar</p>
+            </div>
+          </article>
+          <article class="service-item">
+            <img src="./images/reader.png" alt="Reader Line Icon">
+            <div>
+              <h2>Reader</h2>
+              <p>Membaca buku yang dapat dibagikan ke semua orang</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonial">
+      <div id="testimonial-wrapper" class="container">
+        <div id="testimonial-title">
+          <h1 class="title">Testimoni Pengguna</h1>
+          <p class="description">Apa kata orang-orang yang sudah menggunakan Kreabook?</p>
+        </div>
+        <div id="testimonial-items">
+          <article class="testimonial-item">
+            <img src="./images/avatar1.png" alt="Avatar1 Photo">
+            <p>Keren banget, sekarang aku bisa membuat banyak buku interaktif untuk semua orang.</p>
+            <h2>Klee</h2>
+          </article>
+          <article class="testimonial-item">
+            <img src="./images/avatar2.png" alt="Avatar2 Photo">
+            <p>Suka banget sama interaksi yang ada di dalam buku-bukunya, jadi semakin menarik untuk dibaca.</p>
+            <h2>Aether</h2>
+          </article>
+          <article class="testimonial-item">
+            <img src="./images/avatar3.png" alt="Avatar3 Photo">
+            <p>Waahhh, template yang disediakan juga bagus dan menarik, cocok digunakan untuk media belajar.</p>
+            <h2>Venti</h2>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div id="pricing-wrapper" class="container">
+        <div id="pricing-title">
+          <h1 class="title">Harga Paket Akun</h1>
+          <p class="description">Kami menyediakan beberapa paket akun untuk Anda.</p>
+        </div>
+        <div id="pricing-choose">
+          <a href="javascript:void(0)" class="btn active" id="choose-month">Bulanan</a>
+          <a href="javascript:void(0)" class="btn" id="choose-year">Tahunan</a>
+        </div>
+        <div id="pricing-items">
+          <article class="pricing-item">
+            <h2>Basic</h2>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Membuat buku interaktif</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Disediakan template</span>
+              </li>
+            </ul>
+            <a href="#!" class="btn">Gratis</a>
+          </article>
+          <article class="pricing-item">
+            <h2>Pro</h2>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                </svg>
+                <span>Menyediakan interaksi premium</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                </svg>
+                <span>Dapat diunduh menjadi PDF</span>
+              </li>
+            </ul>
+            <a href="#!" class="btn" id="button-pro">Rp 50.000/bulan</a>
+          </article>
+          <article class="pricing-item">
+            <h2>Master</h2>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                </svg>
+                <span>Menjual buku berbayar</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                </svg>
+                <span>Menyediakan fitur analisa buku</span>
+              </li>
+            </ul>
+            <a href="#!" class="btn" id="button-master">Rp 100.000/bulan</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div id="contact-wrapper" class="container">
+        <article id="contact-form">
+          <div id="contact-title">
+            <h1 class="title">Kontak</h1>
+            <p class="description">Ada pertanyaan? Anda boleh mengirimkan pesan ke kami, dan akan kami respon secepatnya.</p>
+          </div>
+          <form action="#!">
+            <label for="name">
+              <h4>Nama</h4>
+              <input type="text" id="name" name="name" placeholder="Nama">
+            </label>
+            <label for="email">
+              <h4>Email</h4>
+              <input type="email" id="email" name="email" placeholder="Email">
+            </label>
+            <label for="message">
+              <h4>Pesan</h4>
+              <textarea name="message" id="message" rows="5" placeholder="Pesan"></textarea>
+            </label>
+            <button type="submit" class="btn">Kirim</button>
+          </form>
+        </article>
+        <aside id="profile-card">
+          <img id="profile-image" src="./images/me.png" alt="Profile Photo">
+          <div id="profile-role">Frontend Developer</div>
+          <div id="profile-name">M. Fandi Arfabuma</div>
+          <div id="profile-bio">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>Malang, Indonesia</span>
+          </div>
+          <div id="profile-love">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon love-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+            </svg>
+            <span>ReactJS, TailwindCSS, & Flutter</span>
+          </div>
+          <a href="mailto:arfabuma.987@gmail.com" id="profile-email" class="btn">arfabuma.987@gmail.com</a>
+          <div id="profile-social-media">
+            <a href="https://twitter.com/_panpandi" target="_blank">
+              <img src="./images/icons8-twitter.svg" alt="Twitter Icon">
+            </a>
+            <a href="https://www.instagram.com/fandiarfa/" target="_blank">
+              <img src="./images/icons8-instagram.svg" alt="Instagram Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/arfabuma/" target="_blank">
+              <img src="./images/icons8-linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="https://github.com/fandiarfa26" target="_blank">
+              <img src="./images/icons8-github.svg" alt="Github Icon">
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-wrapper" class="container">
+      <div id="copyright">&copy; Kreabook, 2022</div>
+      <a href="javascript:void(0)" id="back-to-top">
+        <span>Kembali ke atas</span> 
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+        </svg>
+    </a>
+    </div>
+  </footer>
+
+  <script src="./js/nav-toggle.js"></script>
+  <script src="./js/nav-shadow.js"></script>
+  <script src="./js/change-color.js"></script>
+  <script src="./js/choose-price.js"></script>
+  <script src="./js/click-scroll.js"></script>
+  
+</body>
+</html>
