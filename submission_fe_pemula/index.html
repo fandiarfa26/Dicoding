@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf App</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+  <header>
+    <div id="header-wrapper" class="container">
+      <h1 id="logo">Bookshelf Apps</h1>
+      <button id="add-button" type="button" class="btn-default">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+        <span class="button-label">Tambah Buku</span>
+      </button>
+    </div>
+  </header>
+  
+  <main>
+    <section id="add">
+      <div id="add-modal" class="modal card">
+        <h1 class="card-title">Tambah Buku</h1>
+        <form id="add-form" action="#">
+          <label for="title" class="form-group">
+            <div class="input-label">Judul</div>
+            <input type="text" id="title" class="form-input" placeholder="Masukkan judul buku" required>
+          </label>
+          <label for="author" class="form-group">
+            <div class="input-label">Penulis</div>
+            <input type="text" id="author" class="form-input" placeholder="Masukkan penulis buku" required>
+          </label>
+          <label for="year" class="form-group">
+            <div class="input-label">Tahun</div>
+            <input type="number" id="year" min="1950" class="form-input" placeholder="Masukkan tahun buku" required>
+          </label>
+          <label for="is-completed" class="form-group checkbox" >
+            <input type="checkbox" id="is-completed">
+            <span>Selesai Dibaca</span>
+          </label>
+          <div id="buttons">
+            <button id="cancel-button" type="button" class="btn-default">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span>Batal</span>
+            </button>
+            <button type="submit" class="btn-default">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Oke, Tambahkan</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="search" class="container card">
+      <h1 class="card-title">Cari Buku</h1>
+      <form id="search-form" action="#">
+        <input type="text" id="search-input" class="form-input" placeholder="Masukkan judul buku yang dicari">
+      </form>
+    </section>
+
+    <div id="shelf-group" class="container">
+      <section id="uncompleted-shelf" class="card card-shelf">
+        <h1 class="card-title">Belum Dibaca</h1>
+        <div id="uncompleted-drop-text" class="drop-text">drop disini!</div>
+        <div id="uncompleted-books" class="list-books"></div>
+      </section>
+      <section id="completed-shelf" class="card card-shelf">
+        <h1 class="card-title">Sudah Dibaca</h1>
+        <div id="completed-drop-text" class="drop-text">drop disini!</div>
+        <div id="completed-books" class="list-books"></div>
+      </section>
+    </div>
+    
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2022, Created by <a href="https://github.com/fandiarfa26" target="_blank">M. Fandi Arfabuma</a>.
+    </div>
+  </footer>
+  
+  <script src="./js/data.js"></script>
+  <script src="./js/event.js"></script>
+  <script src="./js/create.js"></script>
+  <script src="./js/manage.js"></script>
+  <script src="./js/show.js"></script>
+  <script src="./js/storage.js"></script>
+</body>
+</html>

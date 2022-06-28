@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+button,
+input {
+  font-family: "Work Sans", sans-serif;
+}
+
+header {
+  background-color: #2dd4bf;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100vw;
+  border-bottom: 2px solid black;
+  z-index: 50;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+main {
+  padding: 7rem 0;
+}
+
+footer {
+  padding: 1rem 0;
+  bottom: 0;
+  position: fixed;
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #2dd4bf;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #f1f5f9;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0.3rem 0.3rem black;
+}
+
+.btn-delete {
+  color: #dc2626;
+}
+
+.btn-delete:active {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-default:active {
+  background-color: #2dd4bf;
+  color: black;
+}
+
+#header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.button-label {
+  display: none;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem black;
+  background-color: white;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#search {
+  margin-bottom: 2rem;
+}
+
+#search-form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#search-form input {
+  flex: 1;
+}
+
+.form-input {
+  background-color: #f1f5f9;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.form-input:hover {
+  box-shadow: 0.3rem 0.3rem black;
+}
+
+.form-input:focus {
+  outline: 0;
+  border-color: #2dd4bf;
+}
+
+#shelf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.book-card {
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  cursor: move;
+}
+
+.book-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-card p {
+  margin-bottom: 1rem;
+}
+
+.book-card div {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+#add {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#add.show {
+  display: flex;
+}
+
+.modal {
+  width: 90%;
+}
+
+.input-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#add-form #buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.2rem 0;
+}
+
+.checkbox > * {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  position: relative;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  top: -0.2rem;
+  left: 0;
+  background-color: #f1f5f9;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+
+input[type="checkbox"]:hover:before {
+  display: block;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  top: -0.2rem;
+  left: 0;
+  background-color: #f1f5f9;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem black;
+}
+
+input[type="checkbox"]:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  top: -0.2rem;
+  left: 0;
+  background-color: #2dd4bf;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 0.4rem;
+  height: 0.7rem;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+}
+
+.dragging {
+  opacity: 0.1;
+}
+
+.card-shelf {
+  position: relative;
+}
+
+.drop-text {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  border-radius: 0.8rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1024px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .button-label {
+    display: inline;
+  }
+
+  #shelf-group {
+    flex-direction: row;
+  }
+
+  #shelf-group > * {
+    flex: 1;
+  }
+
+  .modal {
+    width: 40%;
+  }
+}
