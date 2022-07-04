@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f9;
+}
+
+body,
+input,
+button,
+textarea {
+  font-family: "Outfit", sans-serif;
+}
+
+input,
+textarea,
+input:focus,
+textarea:focus {
+  outline: 0;
+  border: none;
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.header {
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  position: fixed;
+  width: 100%;
+  padding: 1em;
+}
+
+.header__logo {
+  display: none;
+}
+
+.header__search-wrapper {
+  background-color: white;
+  padding: 0 0.8em;
+  border-radius: 0.5em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.header__search-input {
+  padding: 0.8em 0;
+  font-size: 1em;
+  flex: 1;
+}
+
+main {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.switch-buttons {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  padding: 1em;
+}
+
+.switch-buttons > button {
+  flex: 1;
+  padding: 0.8em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  border: none;
+  color: white;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.switch-buttons__unarchive {
+  background-color: #10b981;
+}
+
+.switch-buttons__unarchive:hover {
+  background-color: #047857;
+}
+
+.switch-buttons__archive {
+  background-color: #8b5cf6;
+}
+
+.switch-buttons__archive:hover {
+  background-color: #6d28d9;
+}
+
+.main__wrapper {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.note-add-form {
+  background-color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.note-add-form__title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-add-form__title-input {
+  font-size: 1.3em;
+  resize: none;
+}
+
+.note-add-form__title-limit {
+  align-self: flex-end;
+  font-size: 0.8em;
+}
+
+.note-add-form__body-input {
+  font-size: 1em;
+  resize: vertical;
+}
+
+.note-add-form__submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  font-size: 1em;
+  gap: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: white;
+  cursor: pointer;
+}
+
+.note-add-form__submit-button:hover {
+  color: white;
+  background-color: #0ea5e9;
+}
+
+.note-list__header {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.note-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.note-list__empty {
+  text-align: center;
+}
+
+.note-item {
+  width: 100%;
+  min-height: 18em;
+  padding: 1em;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.note-item__unarchived:hover {
+  border-color: #10b981;
+}
+
+.note-item__archived:hover {
+  border-color: #8b5cf6;
+}
+
+.note-item__buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.note-item__buttons > button {
+  flex: 1;
+  font-size: 1em;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5em 0;
+  border-radius: 0.5em;
+}
+
+.note-item__buttons > button:hover {
+  background-color: #f8fafc;
+}
+
+.note-item__delete-button {
+  color: #ef4444;
+}
+
+.note-item__unarchive-button {
+  color: #10b981;
+}
+
+.note-item__archive-button {
+  color: #8b5cf6;
+}
+
+.note-item-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.note-item-body__title {
+  font-size: 1.2em;
+  text-overflow: ellipsis;
+}
+
+.note-item-body__date {
+  font-size: 0.9em;
+  color: #64748b;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo {
+    display: block;
+  }
+
+  .header__search-wrapper {
+    width: 40%;
+  }
+
+  .switch-buttons > button {
+    flex: none;
+    width: 20em;
+  }
+
+  .note-add-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1.5em;
+  }
+
+  .note-add-form__title-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .note-add-form__title-input {
+    flex: 1;
+  }
+
+  .note-add-form__submit-button {
+    align-self: flex-end;
+  }
+
+  .note-list__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .note-item {
+    width: 20%;
+  }
+}
