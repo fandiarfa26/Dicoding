@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {getData} from '../utils/data'
+import {getInitialData} from '../utils'
 import Header from './Header';
 import NoteAddForm from './NoteAddForm';
 import NoteList from './NoteList';
@@ -9,7 +9,7 @@ export default class NoteApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      notes: getData(),
+      notes: getInitialData(),
       isSearching: false,
       searchedNotes: [],
       isArchivePage: false,
